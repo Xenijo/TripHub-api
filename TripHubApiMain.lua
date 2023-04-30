@@ -36,8 +36,34 @@ end
 
 function Api:Button(section,string,info,callback)
     section:NewButton(string or "button",info or "nil", function()
-    callback or "nil"
-end)
-    end
+        callback or "nil"
+    end)
+end
+
+function Api:Toggle(section,string,info,callback)
+    section:NewToggle(string or "toggle",info or "nil", function(state)
+        callback(state)
+    end)
+end
+
+function Api:Window(title,theme)
+    return Library.CreateLib(title,theme)
+end
+
+function Api:Section(tab,string)
+    return tab:NewSection(string)
+end
+
+function Api:Dropdown(section,string,info,items,callback)
+    section:NewDropdown(string or "dropdown",info or "nil",items or {"Option 1"}, function(currentOption)
+        callback(currentOption)
+    end)
+end
+
+function Api:ColorPicker(section,string,info,defaultColor,callback)
+    section:NewColorPicker(string or "colorpicker",info or "nil",defaultColor or Color3.fromRGB(0,0,0), function(color)
+        callback(color)
+    end)
+end
 
 return Api
