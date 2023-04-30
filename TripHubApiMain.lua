@@ -25,7 +25,6 @@ local services = {
     ReplicatedFirst = game:GetService("ReplicatedFirst"),
     TextService = game:GetService("TextService"),
     TweenService = game:GetService("TweenService"),
-    WorkspaceEdit = game:GetService("WorkspaceEdit"),
 }
 
 local Api = {}
