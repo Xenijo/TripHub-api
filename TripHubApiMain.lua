@@ -1,3 +1,4 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local services = {
     Workspace = game:GetService("Workspace"),
     ReplicatedStorage = game:GetService("ReplicatedStorage"),
@@ -32,5 +33,11 @@ local Api = {}
 for name, service in pairs(services) do
     Api[name] = service
 end
+
+function Api:Button(section,string,info,callback)
+    section:NewButton(string or "button",info or "nil", function()
+    callback or "nil"
+end)
+    end
 
 return Api
