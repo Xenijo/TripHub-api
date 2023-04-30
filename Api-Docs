@@ -1,0 +1,46 @@
+-- Load the library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/ww/main/Zzz%20f"))()
+
+-- Create a table of game services
+local services = {
+    Workspace = game:GetService("Workspace"),
+    ReplicatedStorage = game:GetService("ReplicatedStorage"),
+    ServerStorage = game:GetService("ServerStorage"),
+    Lighting = game:GetService("Lighting"),
+    Players = game:GetService("Players"),
+    StarterPlayer = game:GetService("StarterPlayer"),
+    StarterPack = game:GetService("StarterPack"),
+    SoundService = game:GetService("SoundService"),
+    HttpService = game:GetService("HttpService"),
+    RunService = game:GetService("RunService"),
+    UserInputService = game:GetService("UserInputService"),
+    ContextActionService = game:GetService("ContextActionService"),
+    MarketplaceService = game:GetService("MarketplaceService"),
+    TeleportService = game:GetService("TeleportService"),
+    InsertService = game:GetService("InsertService"),
+    ContentProvider = game:GetService("ContentProvider"),
+    LocalizationService = game:GetService("LocalizationService"),
+    PathfindingService = game:GetService("PathfindingService"),
+    GroupService = game:GetService("GroupService"),
+    AnalyticsService = game:GetService("AnalyticsService"),
+    DataStoreService = game:GetService("DataStoreService"),
+    MessagingService = game:GetService("MessagingService"),
+    PhysicsService = game:GetService("PhysicsService"),
+    ReplicatedFirst = game:GetService("ReplicatedFirst"),
+    TextService = game:GetService("TextService"),
+    TweenService = game:GetService("TweenService"),
+}
+
+-- Create the API table
+local Api = {}
+
+-- Add each service to the API table
+for name, service in pairs(services) do
+    Api[name] = service
+end
+
+-- Add the Library to the API table
+Api.Library = Library
+
+-- Return the API table
+return Api
