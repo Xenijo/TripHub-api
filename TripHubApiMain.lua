@@ -35,5 +35,6 @@ for name, service in pairs(services) do
     Api[name] = service
 end
 
+Api.Library = Library
 
 return Api
